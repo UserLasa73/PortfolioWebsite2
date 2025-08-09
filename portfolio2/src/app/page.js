@@ -109,7 +109,7 @@ export default function Home() {
         <div className="bg-indigo-600 text-white rounded-2xl p-6">
           <h3 className="text-2xl font-semibold">Let’s work together</h3>
           <p className="mt-2 text-indigo-100">Have a project or an idea? I love collaborating on web and mobile apps.</p>
-          <a href="mailto:youremail@example.com" className="inline-block mt-4 px-4 py-2 bg-white text-indigo-600 rounded-md">Email me</a>
+          <a href="mailto:lasa3705@gmail.com" className="inline-block mt-4 px-4 py-2 bg-white text-indigo-600 rounded-md">Email me</a>
         </div>
       </section>
 
