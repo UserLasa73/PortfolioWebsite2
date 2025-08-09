@@ -4,9 +4,9 @@ export default function Home() {
       id: 1,
       title: 'DietCart (E‑commerce)',
       description: 'Spring Boot + React + PostgreSQL e‑commerce prototype for healthy groceries.',
-      tags: ['React', 'Spring Boot', 'Postgres'],
+      tags: ['TypeScript', 'Java', 'Spring Boot', 'Postgres'],
       demo: '#',
-      repo: '#'
+      repo: 'https://github.com/UserLasa73/DietCart.git'
     },
     {
       id: 2,
@@ -14,16 +14,25 @@ export default function Home() {
       description: 'Expo + React Native alumni engagement app prototype.',
       tags: ['React Native', 'Expo', 'TypeScript'],
       demo: '#',
-      repo: '#'
+      repo: 'https://github.com/UserLasa73/UniBond.git'
     },
     {
       id: 3,
-      title: 'Multimedia Networking Notes',
-      description: 'Study notes and visual diagrams for multimedia networking topics.',
-      tags: ['Docs', 'Networking'],
+      title: 'Parking Lot Management System',
+      description: 'A web application for managing parking lots, built with Spring Boot and React.',
+      tags: ['JavaScript', 'Html', 'CSS'],
       demo: '#',
-      repo: '#'
+      repo: 'https://github.com/UserLasa73/parking-lot-management-.git'
+    },
+    {
+      id: 4,
+      title: 'Portfolio Website',
+      description: 'A Simple portfolio website to display projects and Skills',
+      tags: ['NextJs', 'TailwindCSS'],
+      demo: '#',
+      repo: 'https://github.com/UserLasa73/PortfolioWebsite2.git'
     }
+
   ];
 
   const skills = [
@@ -67,23 +76,32 @@ export default function Home() {
             <a href="#contact" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-indigo-600 text-white">Say hello</a>
           </div>
         </div>
+        {/* Portrait */}
         <div className="order-first md:order-last flex items-center justify-center">
-          <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-tr from-indigo-50 to-white p-6">
+          <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden shadow-2xl bg-white/30 backdrop-blur-lg border border-white/20 p-6">
             <img alt="portrait" src="/potrait2.jpeg" className="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
       </section>
 
-      <section id="about" className="mt-16 max-w-5xl mx-auto px-6 bg-white rounded-2xl p-6 shadow-sm border">
+      {/* About me */}
+      <section id="about" className="mt-16 max-w-5xl mx-auto px-6 bg-white/30 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-sm">
         <h3 className="text-2xl font-semibold">About me</h3>
         <p className="mt-3 text-gray-700">I study IT with a focus on web development. I enjoy building frontend applications using React and styling them with Tailwind. I'm also learning backend development with Spring Boot and PostgreSQL. Outside coding, I like photography and product design.</p>
       </section>
 
+      {/* Projects */}
       <section id="projects" className="mt-10 max-w-5xl mx-auto px-6">
         <h3 className="text-2xl font-semibold">Selected projects</h3>
         <div className="mt-6 grid sm:grid-cols-2 gap-6">
           {projects.map(p => (
-            <div key={p.id} className="border rounded-2xl p-4 bg-white shadow-sm">
+            <a
+              key={p.id}
+              href={p.repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-white/20 rounded-2xl p-4 bg-white/30 backdrop-blur-lg shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-200"
+            >
               <h4 className="font-semibold">{p.title}</h4>
               <p className="mt-1 text-sm text-gray-600">{p.description}</p>
               <div className="mt-3 flex gap-2 flex-wrap">
@@ -91,12 +109,13 @@ export default function Home() {
                   <span key={t} className="text-xs px-2 py-1 rounded-full border">{t}</span>
                 ))}
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
 
-      <section id="skills" className="mt-10 max-w-5xl mx-auto px-6 bg-white p-6 rounded-2xl border shadow-sm">
+      {/* Skills */}
+      <section id="skills" className="mt-10 max-w-5xl mx-auto px-6 bg-white/30 backdrop-blur-lg border border-white/20 p-6 rounded-2xl shadow-sm">
         <h3 className="text-2xl font-semibold">Skills</h3>
         <div className="mt-4 flex flex-wrap gap-3">
           {skills.map(s => (
